@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovation Fellowship Presentations</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F3DB;&#xFE0F;</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-primary: #08080f;
+      --bg-secondary: #0e0e18;
+      --bg-elevated: #1a1a28;
+      --text-primary: #f2f2f8;
+      --text-secondary: #a5a5b8;
+      --text-muted: #65657a;
+      --accent-blue: #4a9eff;
+      --accent-gold: #d4a04a;
+      --accent-teal: #4a9a7a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--bg-elevated);
+    }
+
+    .header-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    h1::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--accent-gold);
+      margin: 0.75rem auto 0;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .category-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 600px) {
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .category-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--bg-elevated);
+      border-left: 3px solid var(--accent-gold);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .category-card:hover {
+      border-color: var(--accent-blue);
+      border-left-color: var(--accent-gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(74, 158, 255, 0.15);
+    }
+
+    .category-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .category-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .category-description {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .category-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--bg-elevated);
+    }
+
+    .category-count {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .category-link {
+      font-size: 0.85rem;
+      color: var(--accent-blue);
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--bg-elevated);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      h1 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-icon">&#x1F3DB;&#xFE0F;</div>
+      <h1>Innovation Fellowship</h1>
+      <p class="subtitle">Presentations and resources for the Governor&#x27;s Innovation Fellowship</p>
+    </header>
+
+    <div class="category-grid">
+
+      <a href="fellowops/" class="category-card">
+        <div class="category-icon">&#x2699;&#xFE0F;</div>
+        <h2 class="category-title">FellowOps</h2>
+        <p class="category-description">Operational resources for Cohort 1 Senior Fellows. Meeting cadence, deliverables, and coordination.</p>
+        <div class="category-footer">
+          <span class="category-count">2 decks</span>
+          <span class="category-link">Browse &rarr;</span>
+        </div>
+      </a>
+
+    </div>
+
+    <footer>
+      <a href="https://github.com/govfellows/presentations">View on GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>
