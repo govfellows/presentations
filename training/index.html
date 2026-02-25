@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trainings | Innovation Fellowship</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-primary: #08080f;
+      --bg-secondary: #0e0e18;
+      --bg-elevated: #1a1a28;
+      --text-primary: #f2f2f8;
+      --text-secondary: #a5a5b8;
+      --text-muted: #65657a;
+      --accent-blue: #4a9eff;
+      --accent-gold: #d4a04a;
+      --accent-teal: #4a9a7a;
+      --accent-burgundy: #a85454;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .back-nav {
+      margin-bottom: 2rem;
+    }
+
+    .back-nav a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .back-nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--bg-elevated);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    h1::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--accent-gold);
+      margin-top: 0.75rem;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    /* Course section */
+    .course-section {
+      margin-bottom: 3rem;
+    }
+
+    .course-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .course-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .course-description {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Progress bar */
+    .progress-container {
+      margin-bottom: 1.5rem;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .progress-label-text {
+      color: var(--text-secondary);
+    }
+
+    .progress-label-count {
+      color: var(--accent-gold);
+      font-weight: 500;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: var(--bg-elevated);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--accent-gold);
+      border-radius: 100px;
+      transition: width 0.3s ease;
+    }
+
+    /* Module cards */
+    .module-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .module-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--bg-elevated);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      transition: all 0.2s ease;
+    }
+
+    .module-card:hover {
+      border-color: var(--accent-blue);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(74, 158, 255, 0.1);
+    }
+
+    .module-card.completed {
+      border-left: 3px solid var(--accent-teal);
+    }
+
+    .module-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 50%;
+      background: var(--bg-elevated);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .module-card.completed .module-number {
+      background: rgba(74, 154, 122, 0.2);
+      color: var(--accent-teal);
+    }
+
+    .module-content {
+      flex-grow: 1;
+      min-width: 0;
+    }
+
+    .module-content h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .module-content h3 a {
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .module-content h3 a:hover {
+      color: var(--accent-blue);
+    }
+
+    .module-description {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .module-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .module-complete-btn {
+      background: var(--bg-elevated);
+      border: 1px solid var(--bg-elevated);
+      border-radius: 8px;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      font-family: inherit;
+      align-self: center;
+    }
+
+    .module-complete-btn:hover {
+      border-color: var(--accent-teal);
+      color: var(--accent-teal);
+    }
+
+    .module-card.completed .module-complete-btn {
+      background: rgba(74, 154, 122, 0.15);
+      border-color: var(--accent-teal);
+      color: var(--accent-teal);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--bg-elevated);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      h1 { font-size: 1.75rem; }
+      .module-card { flex-wrap: wrap; gap: 0.75rem; }
+      .module-complete-btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="back-nav">
+      <a href="../">&larr; Back to Presentations</a>
+    </nav>
+
+    <header>
+      <h1>Trainings</h1>
+      <p class="subtitle">Structured learning paths for state employees. Build practical AI and technology skills.</p>
+    </header>
+
+    <div class="course-section">
+      <div class="course-header">
+        <h2 class="course-title">AI for California Government</h2>
+        <p class="course-description">A course designed for California state employees with 10+ years of experience and spreadsheet-level technical skills. Learn to use AI tools effectively, responsibly, and in compliance with state policy.</p>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-label">
+          <span class="progress-label-text">Course Progress</span>
+          <span class="progress-label-count" id="progress-count">0 of 3 completed</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="module-list">
+
+        <div class="module-card" data-slug="perplexity-ai-gov-training">
+          <span class="module-number">1</span>
+          <div class="module-content">
+            <h3><a href="../decks/perplexity-ai-gov-training-2026-02.html">Perplexity AI for Government</a></h3>
+            <p class="module-description">Sign up for free Pro access with your .gov email, learn the interface, write effective prompts, use Deep Research, and manage privacy settings.</p>
+            <span class="module-meta">13 slides</span>
+          </div>
+          <button class="module-complete-btn" onclick="toggleComplete('perplexity-ai-gov-training')">Mark Complete</button>
+        </div>
+
+        <div class="module-card" data-slug="github-for-non-coders">
+          <span class="module-number">2</span>
+          <div class="module-content">
+            <h3><a href="../decks/github-for-non-coders-2026-02.html">GitHub for Non-Coders</a></h3>
+            <p class="module-description">Why 362+ government orgs use GitHub for documents, policies, and collaboration — not just code. Learn Markdown, the web UI, pull request reviews, and version control.</p>
+            <span class="module-meta">13 slides</span>
+          </div>
+          <button class="module-complete-btn" onclick="toggleComplete('github-for-non-coders')">Mark Complete</button>
+        </div>
+
+        <div class="module-card" data-slug="deck-pipeline-case-study">
+          <span class="module-number">3</span>
+          <div class="module-content">
+            <h3><a href="../decks/deck-pipeline-case-study-2026-02.html">Building a Presentation Pipeline with AI</a></h3>
+            <p class="module-description">How a Claude Code custom skill turns markdown into standalone Reveal.js HTML presentations. Covers the 3-stage pipeline, component library, design system, and a reproducible MVP recipe.</p>
+            <span class="module-meta">19 slides</span>
+          </div>
+          <button class="module-complete-btn" onclick="toggleComplete('deck-pipeline-case-study')">Mark Complete</button>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://github.com/govfellows/presentations">View on GitHub</a>
+    </footer>
+  </div>
+
+  <script>
+    var STORAGE_KEY = 'fellowship-training-progress';
+
+    function getProgress() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function toggleComplete(slug) {
+      var progress = getProgress();
+      var idx = progress.indexOf(slug);
+      if (idx !== -1) {
+        progress.splice(idx, 1);
+      } else {
+        progress.push(slug);
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+      updateUI();
+    }
+
+    function updateUI() {
+      var progress = getProgress();
+      var availableModules = document.querySelectorAll('.module-card[data-slug]');
+      var total = availableModules.length;
+      var completed = 0;
+
+      availableModules.forEach(function(card) {
+        var slug = card.getAttribute('data-slug');
+        var btn = card.querySelector('.module-complete-btn');
+        if (progress.indexOf(slug) !== -1) {
+          card.classList.add('completed');
+          btn.textContent = 'Completed \u2713';
+          completed++;
+        } else {
+          card.classList.remove('completed');
+          btn.textContent = 'Mark Complete';
+        }
+      });
+
+      var pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+      document.getElementById('progress-fill').style.width = pct + '%';
+      document.getElementById('progress-count').textContent = completed + ' of ' + total + ' completed';
+    }
+
+    updateUI();
+  </script>
+</body>
+</html>

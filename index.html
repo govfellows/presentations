@@ -157,7 +157,7 @@
     .recent-grid {
       display: grid;
       gap: 1rem;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
 
     .recent-card {
@@ -205,6 +205,17 @@
       color: var(--accent-gold);
     }
 
+    .recent-tag.training {
+      background: rgba(74, 154, 122, 0.15);
+      color: var(--accent-teal);
+    }
+
+    @media (max-width: 900px) {
+      .recent-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
     @media (max-width: 600px) {
       .recent-grid {
         grid-template-columns: 1fr;
@@ -245,6 +256,16 @@
 
     <div class="category-grid">
 
+      <a href="training/" class="category-card">
+        <div class="category-icon">&#x1F4DA;</div>
+        <h2 class="category-title">Trainings</h2>
+        <p class="category-description">Structured learning paths for state employees. Build practical AI and technology skills.</p>
+        <div class="category-footer">
+          <span class="category-count">1 course &middot; 3 modules</span>
+          <span class="category-link">Browse &rarr;</span>
+        </div>
+      </a>
+
       <a href="fellowops/" class="category-card">
         <div class="category-icon">&#x2699;&#xFE0F;</div>
         <h2 class="category-title">FellowOps</h2>
@@ -269,11 +290,35 @@
         </div>
       </a>
 
+      <a href="decks/deck-pipeline-case-study-2026-02.html" class="recent-card">
+        <h3 class="recent-title">Building a Presentation Pipeline with AI</h3>
+        <div class="recent-meta">
+          <span class="recent-date">Feb 14, 2026</span>
+          <span class="recent-tag training">Training</span>
+        </div>
+      </a>
+
       <a href="decks/cohort1-senior-fellows-bios-2026-02.html" class="recent-card">
         <h3 class="recent-title">Cohort 1 Senior Fellows</h3>
         <div class="recent-meta">
           <span class="recent-date">Feb 12, 2026</span>
           <span class="recent-tag">FellowOps</span>
+        </div>
+      </a>
+
+      <a href="decks/perplexity-ai-gov-training-2026-02.html" class="recent-card">
+        <h3 class="recent-title">Perplexity AI for Government</h3>
+        <div class="recent-meta">
+          <span class="recent-date">Feb 2026</span>
+          <span class="recent-tag training">Training</span>
+        </div>
+      </a>
+
+      <a href="decks/github-for-non-coders-2026-02.html" class="recent-card">
+        <h3 class="recent-title">GitHub for Non-Coders</h3>
+        <div class="recent-meta">
+          <span class="recent-date">Feb 2026</span>
+          <span class="recent-tag training">Training</span>
         </div>
       </a>
 
