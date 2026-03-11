@@ -1,0 +1,149 @@
+{
+  "site": {
+    "title": "Innovation Fellowship Presentations",
+    "headerIcon": "\ud83c\udfdb\ufe0f",
+    "heading": "Innovation Fellowship",
+    "hubTitle": "Presentations",
+    "subtitle": "Presentations and resources for the Governor's Innovation Fellowship",
+    "github": "https://github.com/govfellows/presentations"
+  },
+  "categories": [
+    {
+      "id": "briefings",
+      "icon": "\ud83d\udcdd",
+      "title": "Briefings",
+      "description": "Leadership briefings and strategic analyses for state government decision-makers.",
+      "path": "briefings/"
+    },
+    {
+      "id": "training",
+      "icon": "\ud83d\udcda",
+      "title": "Trainings",
+      "description": "Structured learning paths for state employees. Build practical AI and technology skills.",
+      "path": "training/"
+    },
+    {
+      "id": "fellowops",
+      "icon": "\u2699\ufe0f",
+      "title": "FellowOps",
+      "description": "Operational resources for Cohort 1 Senior Fellows. Meeting cadence, deliverables, and coordination.",
+      "path": "fellowops/"
+    }
+  ],
+  "recentlyAdded": [
+    {
+      "href": "decks/build-your-first-skill-2026-03.html",
+      "title": "Build Your First Claude Code Skill",
+      "date": "Mar 10, 2026",
+      "tag": "Training",
+      "tagClass": "training"
+    },
+    {
+      "href": "decks/deck-pipeline-overview-2026-03.html",
+      "title": "The Deck Pipeline",
+      "date": "Mar 10, 2026",
+      "tag": "Training",
+      "tagClass": "training"
+    },
+    {
+      "href": "decks/senior-fellows-charter-2026-02.html",
+      "title": "Senior Fellows Charter",
+      "date": "Feb 19, 2026",
+      "tag": "FellowOps",
+      "tagClass": ""
+    }
+  ],
+  "briefings": [],
+  "training": {
+    "courseTitle": "AI for California Government",
+    "courseDescription": "A course designed for California state employees with 10+ years of experience and spreadsheet-level technical skills. Learn to use AI tools effectively, responsibly, and in compliance with state policy.",
+    "modules": [
+      {
+        "number": 1,
+        "title": "Perplexity AI for Government",
+        "slug": "perplexity-ai-gov",
+        "href": "decks/perplexity-ai-gov-training-2026-02.html",
+        "description": "Sign up for free Pro access with your .gov email, learn the interface, write effective prompts, use Deep Research, and manage privacy settings.",
+        "meta": "13 slides",
+        "comingSoon": false
+      },
+      {
+        "number": 2,
+        "title": "GitHub for Non-Coders",
+        "slug": "github-for-non-coders",
+        "href": "decks/github-for-non-coders-2026-02.html",
+        "description": "Why 362+ government orgs use GitHub for documents, policies, and collaboration \u2014 not just code. Learn Markdown, the web UI, pull request reviews, and version control.",
+        "meta": "13 slides",
+        "comingSoon": false
+      },
+      {
+        "number": 3,
+        "title": "The Deck Pipeline",
+        "slug": "deck-pipeline-overview",
+        "href": "decks/deck-pipeline-overview-2026-03.html",
+        "description": "What the AI presentation pipeline does \u2014 from markdown to standalone HTML slideshow. Covers the build process, component library, and design system.",
+        "meta": "13 slides",
+        "comingSoon": false
+      },
+      {
+        "number": 4,
+        "title": "Build Your First Claude Code Skill",
+        "slug": "build-your-first-skill",
+        "href": "decks/build-your-first-skill-2026-03.html",
+        "description": "Hands-on guide to creating an AI-powered presentation pipeline with Claude Code. Learn context engineering patterns that transfer to any AI interaction.",
+        "meta": "14 slides",
+        "comingSoon": false
+      }
+    ]
+  },
+  "fellowops": [
+    {
+      "type": "start-here",
+      "title": "Background",
+      "description": "Foundational context for the Governor's Innovation Fellowship.",
+      "cards": [
+        {
+          "title": "Fellow Bios",
+          "description": "Meet the Cohort 1 fellows and their agency assignments.",
+          "href": "decks/cohort1-senior-fellows-bios-2026-02.html",
+          "slides": "33 slides",
+          "comingSoon": false
+        },
+        {
+          "title": "Charter",
+          "description": "The fellowship charter: mission, scope, and operating principles.",
+          "href": "decks/senior-fellows-charter-2026-02.html",
+          "slides": "11 slides",
+          "comingSoon": false
+        }
+      ]
+    },
+    {
+      "type": "ops-section",
+      "title": "Meetings & Report-Backs",
+      "description": "Recurring meeting formats, agendas, and communication decks prepared for ODI leadership.",
+      "cards": [
+        {
+          "title": "Monthly Report-Back",
+          "description": "Slide deck template and format for monthly ODI progress updates.",
+          "comingSoon": true
+        },
+        {
+          "title": "Quarterly Review",
+          "description": "In-person review format covering deliverables, blockers, and strategic alignment.",
+          "comingSoon": true
+        },
+        {
+          "title": "ODI Briefing Decks",
+          "description": "Presentation materials prepared for ODI leadership on fellowship activities and outcomes.",
+          "comingSoon": true
+        },
+        {
+          "title": "Cohort 1 Retrospective",
+          "description": "What worked, what didn't, and what we'd do differently. Candid reflection from the inaugural cohort.",
+          "comingSoon": true
+        }
+      ]
+    }
+  ]
+}

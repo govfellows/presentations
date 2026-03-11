@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briefings | Innovation Fellowship Presentations</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-primary: #08080f;
+      --bg-secondary: #0e0e18;
+      --bg-elevated: #1a1a28;
+      --text-primary: #f2f2f8;
+      --text-secondary: #a5a5b8;
+      --text-muted: #65657a;
+      --accent-blue: #4a9eff;
+      --accent-gold: #d4a04a;
+      --accent-teal: #4a9a7a;
+      --accent-burgundy: #a85454;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .back-nav {
+      margin-bottom: 2rem;
+    }
+
+    .back-nav a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .back-nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--bg-elevated);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    h1::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--accent-gold);
+      margin-top: 0.75rem;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    /* Card grid */
+    .presentations {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 769px) {
+      .presentations {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .presentation-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--bg-elevated);
+      border-left: 3px solid var(--accent-gold);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .presentation-card:hover {
+      border-color: var(--accent-blue);
+      border-left-color: var(--accent-gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(74, 158, 255, 0.15);
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-slides {
+      font-size: 0.8rem;
+      color: var(--accent-gold);
+      font-weight: 500;
+    }
+
+    .card-dates {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .card-description {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .card-secondary {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--accent-blue);
+      margin-bottom: 1rem;
+      text-decoration: none;
+    }
+
+    .card-secondary:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--bg-elevated);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      h1 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="back-nav">
+      <a href="../">&larr; Back to Library</a>
+    </nav>
+
+    <header>
+      <h1>Briefings</h1>
+      <p class="subtitle">Leadership briefings and strategic analyses for state government decision-makers.</p>
+    </header>
+
+
+    <div class="presentations">
+
+    </div>
+
+    <footer>
+      <a href="https://github.com/govfellows/presentations">View on GitHub</a>
+    </footer>
+  </div>
+
+</body>
+</html>
