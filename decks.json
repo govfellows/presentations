@@ -8,14 +8,7 @@
     "github": "https://github.com/govfellows/presentations"
   },
   "categories": [
-    {
-      "id": "briefings",
-      "icon": "\ud83d\udcdd",
-      "title": "Briefings",
-      "description": "Leadership briefings and strategic analyses for state government decision-makers.",
-      "path": "briefings/"
-    },
-    {
+{
       "id": "training",
       "icon": "\ud83d\udcda",
       "title": "Trainings",
@@ -53,7 +46,6 @@
       "tagClass": ""
     }
   ],
-  "briefings": [],
   "training": {
     "courseTitle": "AI for California Government",
     "courseDescription": "A course designed for California state employees with 10+ years of experience and spreadsheet-level technical skills. Learn to use AI tools effectively, responsibly, and in compliance with state policy.",
