@@ -3857,11 +3857,10 @@ section:first-of-type .slide-footer {
 </ul>
 </div></div>
 
-<p>:::callout Warning: Where packages get installed matters
-When Claude installs packages your skill needs (like a markdown converter), it might put them inside the skill folder. This causes a problem — Claude Code reads every file in the skill folder for context, and package folders contain thousands of files that slow things down.</p>
-<p><strong>If this happens, tell Claude:</strong> <em>&quot;Install packages in a separate library folder, not inside the skill itself. Put them in ~/.claude/lib/deck/ instead.&quot;</em>
-:::</p>
-
+<div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-content"><p><strong>Where packages get installed matters</strong></p>
+<p>When Claude installs packages your skill needs (like a markdown converter), it might put them inside the skill folder. This causes a problem — Claude Code reads every file in the skill folder for context, and package folders contain thousands of files that slow things down.</p>
+<p><strong>If this happens, tell Claude:</strong> <em>&quot;Install packages in a separate library folder, not inside the skill itself. Put them in ~/.claude/lib/deck/ instead.&quot;</em></p>
+</div></div>
 </section>
 
 <section data-slide-index="6" data-slide-title="Adding Features: The Iteration Loop">
