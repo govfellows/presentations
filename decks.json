@@ -25,13 +25,6 @@
   ],
   "recentlyAdded": [
     {
-      "href": "decks/dmv-ai-innovation-blueprint-2026-02.html",
-      "title": "DMV AI in Production: What Could Your Department Do?",
-      "date": "Mar 12, 2026",
-      "tag": "FellowOps",
-      "tagClass": ""
-    },
-    {
       "href": "decks/build-your-first-skill-2026-03.html",
       "title": "Build Your First Claude Code Skill",
       "date": "Mar 10, 2026",
@@ -44,6 +37,13 @@
       "date": "Mar 10, 2026",
       "tag": "Training",
       "tagClass": "training"
+    },
+    {
+      "href": "decks/senior-fellows-charter-2026-02.html",
+      "title": "Senior Fellows Charter",
+      "date": "Feb 19, 2026",
+      "tag": "FellowOps",
+      "tagClass": ""
     }
   ],
   "training": {
@@ -106,20 +106,6 @@
           "description": "The fellowship charter: mission, scope, and operating principles.",
           "href": "decks/senior-fellows-charter-2026-02.html",
           "slides": "11 slides",
-          "comingSoon": false
-        }
-      ]
-    },
-    {
-      "type": "ops-section",
-      "title": "AI Discovery",
-      "description": "Cross-department AI discovery and knowledge transfer initiatives.",
-      "cards": [
-        {
-          "title": "DMV AI in Production",
-          "description": "DMV's 6 production AI systems mapped to all 15 Fellowship departments. Prep material for March 20 meeting.",
-          "href": "decks/dmv-ai-innovation-blueprint-2026-02.html",
-          "slides": "25 slides",
           "comingSoon": false
         }
       ]
