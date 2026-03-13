@@ -1385,6 +1385,38 @@ tr:hover td {
 .deck-container.nav-collapsed .deck-nav .nav-text {
   opacity: 0;
   visibility: hidden;
+  width: 0;
+  overflow: hidden;
+}
+
+/* Collapsed header: hide title, center toggle */
+.deck-container.nav-collapsed .nav-header {
+  justify-content: center;
+  padding: 1rem 0.5rem;
+}
+
+.deck-container.nav-collapsed .nav-title {
+  display: none;
+}
+
+/* Collapsed progress: hide text, keep bar as thin indicator */
+.deck-container.nav-collapsed .nav-progress {
+  padding: 0.75rem 0.75rem;
+}
+
+.deck-container.nav-collapsed .nav-progress-text {
+  display: none;
+}
+
+/* Collapsed nav items: center icons, reduce padding */
+.deck-container.nav-collapsed .nav-section > a {
+  justify-content: center;
+  padding: 0.65rem 0;
+  border-left-width: 2px;
+}
+
+.deck-container.nav-collapsed .nav-section-icon {
+  margin-right: 0;
 }
 
 
