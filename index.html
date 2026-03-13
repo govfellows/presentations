@@ -87,7 +87,7 @@
     .category-grid {
       display: grid;
       gap: 1.5rem;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       margin-bottom: 3rem;
     }
 
@@ -221,6 +221,11 @@
       color: var(--accent-gold);
     }
 
+    .recent-tag.projects {
+      background: rgba(74, 158, 255, 0.15);
+      color: var(--accent-blue);
+    }
+
     footer {
       text-align: center;
       margin-top: 3rem;
@@ -236,22 +241,6 @@
     }
 
     footer a:hover {
-      text-decoration: underline;
-    }
-
-    .footer-labs {
-      margin-bottom: 0.75rem;
-    }
-
-    .footer-labs a {
-      color: var(--accent-gold);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-    }
-
-    .footer-labs a:hover {
       text-decoration: underline;
     }
 
@@ -309,11 +298,29 @@
         </div>
       </a>
 
+      <a href="projects/index.html" class="category-card">
+        <div class="category-icon">🔬</div>
+        <h2 class="category-title">Projects</h2>
+        <p class="category-description">Discovery research, tools built by Fellows, and contracted deliverables across the Fellowship portfolio.</p>
+        <div class="category-footer">
+          <span class="category-count">1 project</span>
+          <span class="category-link">Browse &rarr;</span>
+        </div>
+      </a>
+
     </div>
 
     <h3 class="section-title">Recently Added</h3>
 
     <div class="recent-grid">
+
+      <a href="decks/dmv-ai-innovation-blueprint-2026-02.html" class="recent-card">
+        <h3 class="recent-title">DMV AI Innovation Blueprint</h3>
+        <div class="recent-meta">
+          <span class="recent-date">Mar 13, 2026</span>
+          <span class="recent-tag projects">Projects</span>
+        </div>
+      </a>
 
       <a href="decks/build-your-first-skill-2026-03.html" class="recent-card">
         <h3 class="recent-title">Build Your First Claude Code Skill</h3>
@@ -331,18 +338,9 @@
         </div>
       </a>
 
-      <a href="decks/senior-fellows-charter-2026-02.html" class="recent-card">
-        <h3 class="recent-title">Senior Fellows Charter</h3>
-        <div class="recent-meta">
-          <span class="recent-date">Feb 19, 2026</span>
-          <span class="recent-tag">FellowOps</span>
-        </div>
-      </a>
-
     </div>
 
     <footer>
-      <div class="footer-labs"><a href="lab/">Labs</a></div>
       <a href="https://github.com/govfellows/presentations">View on GitHub</a>
     </footer>
   </div>

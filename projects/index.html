@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Innovation Fellowship Presentations</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-primary: #08080f;
+      --bg-secondary: #0e0e18;
+      --bg-elevated: #1a1a28;
+      --text-primary: #f2f2f8;
+      --text-secondary: #a5a5b8;
+      --text-muted: #65657a;
+      --accent-blue: #4a9eff;
+      --accent-gold: #d4a04a;
+      --accent-teal: #4a9a7a;
+      --accent-burgundy: #a85454;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .back-nav {
+      margin-bottom: 2rem;
+    }
+
+    .back-nav a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .back-nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--bg-elevated);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    h1::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--accent-blue);
+      margin-top: 0.75rem;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    /* Start Here callout */
+    .start-here {
+      background: var(--bg-secondary);
+      border: 2px solid var(--accent-blue);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .start-here h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--accent-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .start-here p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Content sections */
+    .ops-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-header {
+      margin-bottom: 1rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .section-header p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* Resource cards */
+    .resource-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 600px) {
+      .resource-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .resource-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--bg-elevated);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      opacity: 0.6;
+    }
+
+    a.resource-card {
+      opacity: 1;
+      text-decoration: none;
+      color: inherit;
+      border-left: 3px solid var(--accent-blue);
+      transition: all 0.2s ease;
+    }
+
+    a.resource-card:hover {
+      border-color: var(--accent-blue);
+      border-left-color: var(--accent-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(74, 158, 255, 0.15);
+    }
+
+    a.resource-card .card-link {
+      font-size: 0.85rem;
+      color: var(--accent-blue);
+      font-weight: 500;
+    }
+
+    .resource-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .resource-description {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+    }
+
+    .coming-soon-label {
+      font-size: 0.75rem;
+      color: var(--accent-blue);
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--bg-elevated);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      h1 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="back-nav">
+      <a href="../index.html">&larr; Back to Library</a>
+    </nav>
+
+    <header>
+      <h1>Projects</h1>
+      <p class="subtitle">Discovery research, tools built by Fellows, and contracted deliverables across the Fellowship portfolio.</p>
+    </header>
+
+    <div class="start-here">
+      <h2>Discovery</h2>
+      <p>Research and analysis from innovation tours and cross-department deep-dives.</p>
+      <div class="resource-grid">
+        <a href="../decks/dmv-ai-innovation-blueprint-2026-02.html" class="resource-card">
+          <h3>DMV AI Innovation Blueprint</h3>
+          <p class="resource-description">How DMV&#x27;s 6 production AI systems could transfer to Fellowship departments. Prep material for the March 20 meeting.</p>
+          <span class="card-link">19 slides</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="ops-section">
+      <div class="section-header">
+        <h2>Builds</h2>
+        <p>Applications, dashboards, and tools built by Fellows or their teams.</p>
+      </div>
+      <div class="resource-grid">
+        <div class="resource-card">
+          <h3>Fellow-Built Tools</h3>
+          <p class="resource-description">Tools and prototypes created during the Fellowship. First builds expected Q2 2026.</p>
+          <span class="coming-soon-label">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ops-section">
+      <div class="section-header">
+        <h2>Contracted</h2>
+        <p>Vendor and partner deliverables, pilot results, and evaluation reports.</p>
+      </div>
+      <div class="resource-grid">
+        <div class="resource-card">
+          <h3>Pilot Results</h3>
+          <p class="resource-description">Outcomes from contracted pilots and vendor engagements across Fellowship departments.</p>
+          <span class="coming-soon-label">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://github.com/govfellows/presentations">View on GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -21,9 +21,23 @@
       "title": "FellowOps",
       "description": "Operational resources for Cohort 1 Senior Fellows. Meeting cadence, deliverables, and coordination.",
       "path": "fellowops/"
+    },
+    {
+      "id": "projects",
+      "icon": "\ud83d\udd2c",
+      "title": "Projects",
+      "description": "Discovery research, tools built by Fellows, and contracted deliverables across the Fellowship portfolio.",
+      "path": "projects/"
     }
   ],
   "recentlyAdded": [
+    {
+      "href": "decks/dmv-ai-innovation-blueprint-2026-02.html",
+      "title": "DMV AI Innovation Blueprint",
+      "date": "Mar 13, 2026",
+      "tag": "Projects",
+      "tagClass": "projects"
+    },
     {
       "href": "decks/build-your-first-skill-2026-03.html",
       "title": "Build Your First Claude Code Skill",
@@ -37,13 +51,6 @@
       "date": "Mar 10, 2026",
       "tag": "Training",
       "tagClass": "training"
-    },
-    {
-      "href": "decks/senior-fellows-charter-2026-02.html",
-      "title": "Senior Fellows Charter",
-      "date": "Feb 19, 2026",
-      "tag": "FellowOps",
-      "tagClass": ""
     }
   ],
   "training": {
@@ -133,6 +140,46 @@
         {
           "title": "Cohort 1 Retrospective",
           "description": "What worked, what didn't, and what we'd do differently. Candid reflection from the inaugural cohort.",
+          "comingSoon": true
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "type": "start-here",
+      "title": "Discovery",
+      "description": "Research and analysis from innovation tours and cross-department deep-dives.",
+      "cards": [
+        {
+          "title": "DMV AI Innovation Blueprint",
+          "description": "How DMV's 6 production AI systems could transfer to Fellowship departments. Prep material for the March 20 meeting.",
+          "href": "decks/dmv-ai-innovation-blueprint-2026-02.html",
+          "slides": "19 slides",
+          "comingSoon": false
+        }
+      ]
+    },
+    {
+      "type": "ops-section",
+      "title": "Builds",
+      "description": "Applications, dashboards, and tools built by Fellows or their teams.",
+      "cards": [
+        {
+          "title": "Fellow-Built Tools",
+          "description": "Tools and prototypes created during the Fellowship. First builds expected Q2 2026.",
+          "comingSoon": true
+        }
+      ]
+    },
+    {
+      "type": "ops-section",
+      "title": "Contracted",
+      "description": "Vendor and partner deliverables, pilot results, and evaluation reports.",
+      "cards": [
+        {
+          "title": "Pilot Results",
+          "description": "Outcomes from contracted pilots and vendor engagements across Fellowship departments.",
           "comingSoon": true
         }
       ]
