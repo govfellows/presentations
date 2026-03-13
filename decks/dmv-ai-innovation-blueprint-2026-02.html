@@ -234,7 +234,7 @@ body {
 }
 
 .deck-container.nav-collapsed .deck-content {
-  margin-left: var(--nav-width-collapsed);
+  margin-left: 0;
 }
 
 
@@ -1377,46 +1377,42 @@ tr:hover td {
     inset -1px 0 0 var(--line-subtle);
 }
 
-/* Collapsed state */
+/* Collapsed state — fully hide nav */
 .deck-container.nav-collapsed .deck-nav {
-  width: var(--nav-width-collapsed);
-}
-
-.deck-container.nav-collapsed .deck-nav .nav-text {
-  opacity: 0;
-  visibility: hidden;
   width: 0;
-  overflow: hidden;
+  box-shadow: none;
 }
 
-/* Collapsed header: hide title, center toggle */
-.deck-container.nav-collapsed .nav-header {
-  justify-content: center;
-  padding: 1rem 0.5rem;
-}
-
-.deck-container.nav-collapsed .nav-title {
+/* Floating re-open button when nav is hidden */
+.nav-reopen {
   display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 101;
+  background: rgba(6, 8, 16, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
 }
 
-/* Collapsed progress: hide text, keep bar as thin indicator */
-.deck-container.nav-collapsed .nav-progress {
-  padding: 0.75rem 0.75rem;
+.nav-reopen:hover {
+  background: rgba(6, 8, 16, 0.95);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
-.deck-container.nav-collapsed .nav-progress-text {
-  display: none;
+.nav-reopen svg {
+  width: 20px;
+  height: 20px;
 }
 
-/* Collapsed nav items: center icons, reduce padding */
-.deck-container.nav-collapsed .nav-section > a {
-  justify-content: center;
-  padding: 0.65rem 0;
-  border-left-width: 2px;
-}
-
-.deck-container.nav-collapsed .nav-section-icon {
-  margin-right: 0;
+.deck-container.nav-collapsed .nav-reopen {
+  display: flex;
 }
 
 
@@ -3611,6 +3607,13 @@ section:first-of-type .slide-footer {
 </head>
 <body>
   <div class="deck-container">
+
+    <!-- Floating button to re-open nav when collapsed -->
+    <button class="nav-reopen" aria-label="Open navigation" onclick="toggleNav()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
 
     <!-- Left Navigation -->
     <nav class="deck-nav" aria-label="Presentation navigation">

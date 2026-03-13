@@ -234,7 +234,7 @@ body {
 }
 
 .deck-container.nav-collapsed .deck-content {
-  margin-left: var(--nav-width-collapsed);
+  margin-left: 0;
 }
 
 
@@ -1381,14 +1381,42 @@ tr:hover td {
     inset -1px 0 0 var(--line-subtle);
 }
 
-/* Collapsed state */
+/* Collapsed state — fully hide nav */
 .deck-container.nav-collapsed .deck-nav {
-  width: var(--nav-width-collapsed);
+  width: 0;
+  box-shadow: none;
 }
 
-.deck-container.nav-collapsed .deck-nav .nav-text {
-  opacity: 0;
-  visibility: hidden;
+/* Floating re-open button when nav is hidden */
+.nav-reopen {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 101;
+  background: rgba(6, 8, 16, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.nav-reopen:hover {
+  background: rgba(6, 8, 16, 0.95);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-reopen svg {
+  width: 20px;
+  height: 20px;
+}
+
+.deck-container.nav-collapsed .nav-reopen {
+  display: flex;
 }
 
 
@@ -3544,6 +3572,13 @@ section:first-of-type .slide-footer {
 </head>
 <body>
   <div class="deck-container">
+
+    <!-- Floating button to re-open nav when collapsed -->
+    <button class="nav-reopen" aria-label="Open navigation" onclick="toggleNav()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
 
     <!-- Left Navigation -->
     <nav class="deck-nav" aria-label="Presentation navigation">
