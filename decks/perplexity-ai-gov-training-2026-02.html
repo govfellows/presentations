@@ -1420,6 +1420,37 @@ tr:hover td {
 }
 
 
+
+/* ============================================
+   Navigation Group Dividers
+   ============================================ */
+
+.nav-divider {
+  list-style: none;
+  padding: 0.6rem 1.5rem 0.3rem;
+  margin-top: 0.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-divider-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-gold-muted, #a88840);
+  opacity: 0.7;
+}
+
+.nav-divider:first-of-type {
+  margin-top: 0;
+  border-top: none;
+}
+
+/* Hide dividers when nav is collapsed (width: 0) */
+.deck-container.nav-collapsed .nav-divider {
+  display: none;
+}
+
 /* ============================================
    Navigation Header
    ============================================ */
@@ -3601,7 +3632,10 @@ section:first-of-type .slide-footer {
       </div>
 
       <ul class="nav-sections">
-        <li class="nav-section active current">
+        <li class="nav-divider"><span class="nav-divider-label">Getting Started</span></li>
+<li class="nav-divider"><span class="nav-divider-label">Advanced Features</span></li>
+<li class="nav-divider"><span class="nav-divider-label">Practical Use</span></li>
+<li class="nav-section active current">
   <a href="#/0" onclick="deck.slide(0); return false;">
     <svg class="nav-section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <circle cx="12" cy="12" r="3"/>
