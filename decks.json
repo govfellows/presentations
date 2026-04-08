@@ -92,6 +92,15 @@
         "description": "Hands-on guide to creating an AI-powered presentation pipeline with Claude Code. Learn context engineering patterns that transfer to any AI interaction.",
         "meta": "14 slides",
         "comingSoon": false
+      },
+      {
+        "number": 5,
+        "title": "Deck Pipeline Case Study",
+        "slug": "deck-pipeline-case-study",
+        "href": "decks/deck-pipeline-case-study-2026-02.html",
+        "description": "A deep dive into how the AI presentation pipeline was designed and built. Architecture decisions, component library, and lessons learned from production use.",
+        "meta": "22 slides",
+        "comingSoon": false
       }
     ]
   },
