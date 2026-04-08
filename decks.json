@@ -37,69 +37,19 @@
       "date": "Mar 13, 2026",
       "tag": "Projects",
       "tagClass": "projects"
-    },
-    {
-      "href": "decks/build-your-first-skill-2026-03.html",
-      "title": "Build Your First Claude Code Skill",
-      "date": "Mar 10, 2026",
-      "tag": "Training",
-      "tagClass": "training"
-    },
-    {
-      "href": "decks/deck-pipeline-overview-2026-03.html",
-      "title": "The Deck Pipeline",
-      "date": "Mar 10, 2026",
-      "tag": "Training",
-      "tagClass": "training"
     }
   ],
   "training": {
-    "courseTitle": "AI for California Government",
-    "courseDescription": "A course designed for California state employees with 10+ years of experience and spreadsheet-level technical skills. Learn to use AI tools effectively, responsibly, and in compliance with state policy.",
+    "courseTitle": "Technology Training",
+    "courseDescription": "Hands-on training materials for state employees. No technical background required.",
     "modules": [
       {
         "number": 1,
-        "title": "Perplexity AI for Government",
-        "slug": "perplexity-ai-gov",
-        "href": "decks/perplexity-ai-gov-training-2026-02.html",
-        "description": "Sign up for free Pro access with your .gov email, learn the interface, write effective prompts, use Deep Research, and manage privacy settings.",
-        "meta": "13 slides",
-        "comingSoon": false
-      },
-      {
-        "number": 2,
         "title": "GitHub for Non-Coders",
         "slug": "github-for-non-coders",
         "href": "decks/github-for-non-coders-2026-02.html",
         "description": "Why 362+ government orgs use GitHub for documents, policies, and collaboration \u2014 not just code. Learn Markdown, the web UI, pull request reviews, and version control.",
         "meta": "13 slides",
-        "comingSoon": false
-      },
-      {
-        "number": 3,
-        "title": "The Deck Pipeline",
-        "slug": "deck-pipeline-overview",
-        "href": "decks/deck-pipeline-overview-2026-03.html",
-        "description": "What the AI presentation pipeline does \u2014 from markdown to standalone HTML slideshow. Covers the build process, component library, and design system.",
-        "meta": "13 slides",
-        "comingSoon": false
-      },
-      {
-        "number": 4,
-        "title": "Build Your First Claude Code Skill",
-        "slug": "build-your-first-skill",
-        "href": "decks/build-your-first-skill-2026-03.html",
-        "description": "Hands-on guide to creating an AI-powered presentation pipeline with Claude Code. Learn context engineering patterns that transfer to any AI interaction.",
-        "meta": "14 slides",
-        "comingSoon": false
-      },
-      {
-        "number": 5,
-        "title": "Deck Pipeline Case Study",
-        "slug": "deck-pipeline-case-study",
-        "href": "decks/deck-pipeline-case-study-2026-02.html",
-        "description": "A deep dive into how the AI presentation pipeline was designed and built. Architecture decisions, component library, and lessons learned from production use.",
-        "meta": "22 slides",
         "comingSoon": false
       }
     ]
